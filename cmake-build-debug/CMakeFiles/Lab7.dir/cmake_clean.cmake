@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Lab7.dir/BST.cpp.obj"
-  "CMakeFiles/Lab7.dir/main.cpp.obj"
-  "Lab7.exe"
-  "Lab7.exe.manifest"
-  "Lab7.lib"
+  "CMakeFiles/Lab7.dir/BST.cpp.o"
+  "CMakeFiles/Lab7.dir/main.cpp.o"
+  "Lab7"
   "Lab7.pdb"
 )
 

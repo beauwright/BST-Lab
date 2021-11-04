@@ -15,6 +15,7 @@ NodeInterface * BST::getRootNode() {
 }
 bool BST::add(int data) {
     cout << "make add" << endl;
+    cout << "test GitHub real quick" << endl;
     return false;
 }
 bool BST::remove(int data) {
