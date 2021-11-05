@@ -10,15 +10,18 @@ BST::BST() {
 BST::~BST() {
     cout << "deconstructor reached" << endl;
 }
-NodeInterface * BST::getRootNode() {
+NodeInterface * BST::getRootNode() const{
     cout << "make getRootNode" << endl;
 }
 bool BST::add(int data) {
-    cout << "make add" << endl;
-    cout << "test GitHub real quick" << endl;
-    cout << "anther GitHub test" << endl;
-    cout << "One last GitHub test" << endl;
-    return false;
+    cout << "add"<<endl;
+    Node *ptr = new Node(data);
+    ptr->leftChild = NULL; // To test that the friend relationship works
+    NodeInterface *rval = ptr->getLeftChild();
+    long value = (long)rval;
+    cout << "Added "<<value<<endl;
+    root = ptr;
+    return true;
 }
 bool BST::remove(int data) {
     cout << "make remove" << endl;

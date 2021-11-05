@@ -9,9 +9,12 @@
 
 
 class BST: public BSTInterface {
+protected:
+    Node *root;
+public:
     BST();
     ~BST();
-    NodeInterface * getRootNode();
+    NodeInterface * getRootNode() const;
     bool add(int data);
     bool remove(int data);
     void clear();
