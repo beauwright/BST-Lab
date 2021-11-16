@@ -41,7 +41,7 @@ bool BST::remove(int data, Node *node) {
     if (node == nullptr) {
         return false;
     } else if (node->getData() == data) {
-        parent = getParent(data, root);
+        parent = getParent(data, this->root);
         if (parent->getLeftChild()->getData() == data) {
             parent->setLeftChild(nullptr);
         }
@@ -58,7 +58,7 @@ bool BST::remove(int data, Node *node) {
     return false;
 }
 
-Node* getParent(int data, Node *node) {
+Node* BST::getParent(int data, Node *node) {
     Node *nullNode = nullptr;
     if (node != nullptr && node->getData() != data) {
         if (node->getLeft() != nullptr) {
