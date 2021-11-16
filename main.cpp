@@ -20,11 +20,25 @@ namespace ta {
 
 
 int main() {
-
 	std::ifstream ifs; // create the stream to read in from the files
 	std::ofstream ofs; // create the output stream to write to an output file
 	std::string temp; // used to store the current instruction
 	BST* bstptr = NULL;//the BST
+    /*
+// Test
+string BSTtoString(BST* bst);
+bstptr = new BST();
+bstptr->add(5);
+cout << BSTtoString(bstptr) << endl;
+bstptr->add(7);
+bstptr->add(3);
+bstptr->add(8);
+cout << BSTtoString(bstptr) << endl;
+bstptr->clear();
+cout << "After clear:" << endl << BSTtoString(bstptr) << endl;
+return 0;
+// End of test
+*/
 
 	for (int i = 0; i < NUM_FILES; i++) {
 		ifs.open(fileArray[i]); // open the file to read from

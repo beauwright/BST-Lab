@@ -9,11 +9,24 @@
 using namespace std;
 
 class Node: public NodeInterface {
-    Node();
+public:
+    Node(int data);
     ~Node();
     int getData() const;
     NodeInterface * getLeftChild() const;
     NodeInterface * getRightChild() const;
+    Node *&getLeft();
+    Node *&getRight();
+
+    bool setLeftChild(Node* leftChild);
+    bool setRightChild(Node* rightChild);
+protected:
+    int data;
+    Node* parent = nullptr;
+    Node* leftChild = nullptr;
+    Node* rightChild = nullptr;
+    void setData(int data);
+    void setParent(Node* parent);
 };
 
 
