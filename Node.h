@@ -20,12 +20,15 @@ public:
 
     bool setLeftChild(Node* leftChild);
     bool setRightChild(Node* rightChild);
+
+    void setData(int data);
+
 protected:
     int data;
     Node* parent = nullptr;
     Node* leftChild = nullptr;
     Node* rightChild = nullptr;
-    void setData(int data);
+
     void setParent(Node* parent);
 };
 
