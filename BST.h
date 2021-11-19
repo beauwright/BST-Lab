@@ -12,29 +12,19 @@
 class BST: public BSTInterface {
 public:
     BST() {};
-
     ~BST();
-
     NodeInterface *getRootNode() const;
-
     bool add(int data);
-
     bool remove(int data);
-
     void clear();
 
 private:
     bool add(int data, Node *&node);
-
     bool remove(int data, Node *&node);
 
 protected:
     Node *root = nullptr;
-
     void recursiveClear(Node *node);
-
-    //Node *getIOP(Node *node, int previous);
-
     void replace(Node *&placeholder, Node *&node);
 };
 
